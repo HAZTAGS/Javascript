@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar Javascript</title>
+    </head>
+<body>
+
+<h2>Belajar JavaScript Part Operator</h2>
+
+<!-- 1. Operator aritmatika -->
+
+<b>Variabel : </b><br>
+<b>a = 5; </b><br>
+<b>b = 4; </b><br>
+<b>c = 0; </b><br>
+<hr>
+<p id="tambah"></p>
+<p id="kurang"></p>
+<p id="bagi"></p>
+<p id="kali"></p>
+<p id="pangkat"></p>
+<p id="mod"></p>
+
+<script>
+
+    // Deklarasi variabel
+    var a = 5;
+    var b = 4;
+    var c = 0;
+
+    // penjumlahan
+    c = a + b;
+    document.getElementById('tambah').innerHTML = "Penjumlahan : a + b = " + c;
+
+    // pengurangan
+    c = a - b;
+    document.getElementById('kurang').innerHTML = " Pengurangan : a - b = " + c;
+    
+    // Pembagian
+    c = a / b;
+    document.getElementById('bagi').innerHTML = "Pembagian : a / b = " + c;
+
+    // Perkalian
+    c = a * b;
+    document.getElementById('kali').innerHTML = "Perkalian : a * b = " + c;
+
+    // pemangkatan
+    c = a ** b;
+    document.getElementById('pangkat').innerHTML = "Pangkat : a ** b = " + c;
+
+    // Modulus
+    c = a % b;
+    document.getElementById('mod').innerHTML = "Modulus : a % b = " + c;
+    // document.write("${a} % ${b} = ${c}<br/>");
+
+</script>
+
+<!-- 2. Operator Assignment -->
+
+<p>Variabel : angka = 7;</p>
+<hr>
+<p id="tambah"></p>
+<p id="kurang"></p>
+<p id="bagi"></p>
+<p id="kali"></p>
+<p id="pangkat"></p>
+<p id="mod"></p>
+
+<script>
+
+    // Deklarasi variabel
+    var angka = 7;
+
+    // Assignment penjumlahan
+    angka += 5; // singkatan dari -> angka = angka + 5;
+    document.getElementById('tambah').innerHTML = "Assignment Penjumlahan : angka += 5 " + angka;
+
+    // Assignment pengurangan
+    angka -= 5; // singkatan dari -> angka = angka - 5;
+    document.getElementById('kurang').innerHTML = "Assignment Pengurangan : angka -= 5 " + angka;
+    
+    // Assignment Pembagian
+    angka /= 2; // singkatan dari -> angka = angka / 2;
+    document.getElementById('bagi').innerHTML = "Assignment Pembagian : angka /= 2 " + angka;
+
+    // Assignment Perkalian
+    angka *= 2; // singkatan dari -> angka = angka * 2;
+    document.getElementById('kali').innerHTML = "Assignment Perkalian : angka *= 5 " + angka;
+
+    // Assignment pemangkatan
+    angka **= 5; // singkatan dari -> angka = angka ** 5;
+    document.getElementById('pangkat').innerHTML = "Assignment Pangkat : angka **= 5; " + angka;
+
+    // Assignment Modulus
+    angka %= 3; // singkatan dari -> angka = angka % 3;
+    document.getElementById('mod').innerHTML = "Assignment Modulus : angka %= 5; " + angka;
+
+</script>
+
+<!-- 3. Operator Perbandingan -->
+
+<b>Variabel : </b><br>
+<b>a = 5; </b><br>
+<b>b = 7; </b><br>
+<hr>
+<p id="lebih_besar"></p>
+<p id="lebih_kecil"></p>
+<p id="sama_dengan"></p>
+<p id="tidak_sama_dengan"></p>
+<p id="lebih_kecil_sama_dengan"></p>
+<p id="lebih_besar_sama_dengan"></p>
+
+<script>
+
+    // Deklarasi variabel
+    var a = 5;
+    var b = 7;
+    var hasil = 0;
+
+    // Perbandingan >
+    hasil = a > b;
+    document.getElementById('lebih_besar').innerHTML = "a lebih besar dari b? : " + hasil;
+
+    // Perbandingan <
+    hasil = a < b;
+    document.getElementById('lebih_kecil').innerHTML = "a lebih kecil dari b? : " + hasil;
+    
+    // Perbandingan ==
+    hasil = a == b;
+    document.getElementById('sama_dengan').innerHTML = "a sama dengan dari b? : " + hasil;
+
+    // Perbandingan !=
+    hasil = a != b;
+    document.getElementById('tidak_sama_dengan').innerHTML = "a tidak sama dengan b? : " + hasil;
+
+    // Perbandingan <=
+    hasil = a <= b;
+    document.getElementById('lebih_kecil_sama_dengan').innerHTML = "a lebih kecil sama dengan b? : " + hasil;
+
+    // Perbandingan >=
+    hasil = a >= b;
+    document.getElementById('lebih_besar_sama_dengan').innerHTML = "a lebih besar sama dengan b? : " + hasil;
+    // document.write("${a} % ${b} = ${c}<br/>");
+
+</script>
+
+<!-- 4. Operator Logika -->
+
+<b>Variabel : </b><br>
+<b>a = 5; </b><br>
+<b>b = 7; </b><br>
+<b>benar = a < b;</b><br>
+<b>salah = a > b</b><br>
+<hr>
+<p id="and"></p>
+<p id="or"></p>
+<p id="not"></p>
+
+<script>
+
+    // Deklarasi variabel
+    var a = 5;
+    var b = 7;
+    var benar = a < b;
+    var salah = a > b;
+
+    // Perbandingan && (AND)
+    var hasil = benar && salah;
+    document.getElementById('and').innerHTML = "(AND) Nilai a lebih kecil dari b, Niali a lebih besar adri b : " + hasil;
+
+    // Perbandingan || (OR)
+    var hasil = benar || salah;
+    document.getElementById('or').innerHTML = "(OR) Nilai a lebih kecil dari b, Niali a lebih besar adri b : " + hasil;
+    
+    // Perbandingan ! (NOT)
+    var hasil = !salah;
+    document.getElementById('not').innerHTML = "(NOT) Nilai a lebih besar dari Niali b : " + hasil; 
+
+</script>
+
+
+<!-- 5. Operator Ternary -->
+
+<script>
+
+    // <kondisi> ? "true (opsi 1)" : "false (opsi 2)".
+
+    var tanya = confirm("sudah subscribe channel HAZTAGS?");
+
+    var jawab = tanya ? "Thanks... Selamat datang di channel HAZTAGS" : "Subscribe channel HAZTAGS untuk kasih dukungan";
+    document.write(jawab);
+</script>
+
+</body>
+</html>
