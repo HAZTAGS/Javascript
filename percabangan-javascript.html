@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar Javascript</title>
+    </head>
+<body>
+
+<h2>Belajar JavaScript Part Percabangan</h2>
+<hr>
+
+<script>
+
+    // // 1. if else
+    // var nilai = prompt("Nilai : ");
+
+    // // if
+    // if(nilai >= 70){
+    //     document.write("Nilai kamu : " + nilai + ". Selamat, kamu lulus matakuliah ini");
+    // } else { // else
+    //     document.write("Nilai kamu : " + nilai + ". kamu belum lulus matakuliah ini");
+    // }
+
+    // // else if
+    // var nilai_huruf = prompt("Nilai : ");
+
+    // if(nilai_huruf >= 90){
+    //     nilai_huruf = 'A';
+    // } else if (nilai_huruf >= 80) { 
+    //     nilai_huruf = 'B';
+    // } else if (nilai_huruf >= 70) { 
+    //     nilai_huruf = 'C';
+    // } else if (nilai_huruf >= 60) { 
+    //     nilai_huruf = 'D';
+    // } else {
+    //     nilai_huruf = 'E';
+    // }    
+
+    // document.write("Nilai Kamu : " + nilai_huruf);
+
+    // // 2. Switch
+
+    // var pilihan = prompt("Silahkan pilih mistery box 1, 2 atau 3 :");
+    // var mistery_box = "";
+    // switch(pilihan){
+    //     case "1":
+    //         mistery_box = document.write("Voucher liburan ke Bali");
+    //         break;
+    //     case "2":
+    //         mistery_box = document.write("ZOnK, :(");
+    //         break;
+    //     case "3":
+    //         mistery_box = document.write("Tiket masuk Dufan");
+    //         break;
+    //     default:
+    //         document.write("<p>Pilihan hanya 1 sampai 3</p>");
+    // }
+
+    // if(mistery_box === ""){
+    //     document.write("<p>Masukkan angka 1 sampai 3</p>");
+    // } else {
+    //     document.write("<h3><i>Kamu mendapatkan " + mistery_box + "</i></h3>");
+    // }
+
+    // 3. Percabangan Dengan Operator Ternary
+    var tanya = prompt("Apa sekarang masih pagi ? ");
+    
+    var jawab = (tanya == "ya") ? "Selamat Pagi" : "Aku siap";
+    document.write("Halo, " + jawab);
+
+
+
+
+    
+</script>
+
+</body>
+</html>
