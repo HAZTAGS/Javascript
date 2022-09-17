@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar Javascript</title>
+    </head>
+<body>
+
+<h2>Belajar JavaScript Part Perulangan.</h2>
+<hr>
+
+<script>
+
+// Counted Loop
+// ============
+
+    // 1. perulangan for
+	for(let i = 0; i < 20; i++){
+	    document.write("<p>Perulangan ke - " + i + "</p>")
+	}
+
+    var hewan = ["Harimau", "Kucing", "Gajah", "Biawak", "Komodo"];
+
+    // 2.1 perulangan foreach
+	for(i = 0; i < hewan.length; i++){
+	    document.write(i+". "+ hewan[i] + "<br/>");
+	}
+
+    // 2.2 for dengan make in
+    for (i in hewan) {
+	    document.write(i+ ". " + hewan[i] + "<br/>");
+	}
+
+    // 2.3 perulangan foreach
+    hewan.forEach(function(hewans) {
+	    document.write("<p>" + hewans + "<p>");
+	});
+
+    // 3. perulangan repeat
+    document.write("Subscribe HAZTAGS ! ".repeat(100));
+
+// Uncounted Loop
+// ==============
+
+	// 4. perulangan while tanpa 
+    var ulang = confirm("Mau diulangi?");
+	var hitung = 0;
+
+	while(ulang){
+	    hitung++;
+	    ulang = confirm("Ulangi lagi?");
+	}
+
+	document.write("Hasil perulangan : "+ hitung +" kali");
+
+    // opsi lain
+    var a = prompt("Masukkan jumlah : ");
+	    
+	while(a > 0){
+	    document.write("Belajar JavaScript di HAZTAGS! <br/>");
+	    a--;
+	}
+
+	// perluangan tak terbats (Infinited loop)
+    var a = prompt("Masukkan jumlah : ");
+
+	while(a > 0){
+	    document.write("Belajar JavaScript di HAZTAGS! <br/>");
+	    a++;
+	}
+
+	// 5. perulangan do/while
+	var ulang = confirm("Mau diulangi?");
+	var hitung = 0;
+	do {
+	    hitung++;
+	    ulang = confirm("Ulangi lagi?");
+	} while(ulang)
+
+	document.write("Hasil perulangan : "+ hitung +" kali");
+
+	// nested loop
+	for(let i = 0; i < 10; i++){
+		for(let j = 0; j < 10; j++){
+			document.write("<p>Perulangan ke " + i + "," + j + "</p>");
+		}
+	}
+
+	
+</script>
+
+</body>
+</html>
