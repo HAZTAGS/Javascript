@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar Javascript</title>
+    </head>
+<body>
+
+<h2>Belajar JavaScript Part Function.</h2>
+<hr>
+
+<div style="background-color: #deca16; padding: 10px;">
+    <h3>Input Form</h3>
+    <input type="text" name="txt_buah" placeholder="input nama buah disini" />
+    <button type="button" onclick="addBuah()">Tambah</button>
+</div>
+
+<div>
+    <ol id="list-buah">
+    </ol>
+</div>
+
+<script>
+
+    // bikin data array buah
+    var data_buah = ["Apel", "Mangga", "Manggis", "Melon"];
+
+    // panggil function showBuah
+    showBuah();
+
+    // ** FUNCTION CRUD (Create, Read, Update, Delete) ** //
+
+    // function untuk menampilkan data buah (R = READ)
+    function showBuah(){
+        var list_buah = document.getElementById("list-buah");
+
+        // clear list buah
+        list_buah.innerHTML = "";
+
+        // looping semua data buah
+        for(let i = 0; i < data_buah.length; i++){
+            var btn_edit = "<a href='#' onclick='editBuah("+i+")'>Edit</a>";
+            var btn_delete = "<a href='#' onclick='deleteBuah("+i+")'>Hapus</a>";
+
+            list_buah.innerHTML += "<li>" + data_buah[i] + " ["+btn_edit + " | "+ btn_delete +"]</li>";
+        }
+    }
+
+    // function untuk tambah data buah (CREATE)
+    function addBuah(){
+        var input = document.querySelector("input[name=txt_buah]");
+        data_buah.push(input.value);
+        showBuah();
+    }
+
+    // function untuk edit data buah (UPDATE)
+    function editBuah(id){
+        var edit_buah = prompt("Edit Buah", data_buah[id]);
+        data_buah[id] = edit_buah;
+        showBuah();
+    }
+
+    // function untuk hapus data buah (DELETE)
+    function deleteBuah(id){
+        data_buah.splice(id, 1);
+        showBuah();
+    }
+
+
+</script>
+
+</body>
+</html>
